@@ -1,1 +1,1 @@
-# Valid-Cube-Scrambler-
+# Valid-Cube-Scrambler
