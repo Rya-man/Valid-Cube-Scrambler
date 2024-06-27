@@ -48,22 +48,22 @@ string generate() {
 }
 ```
 
-The `cond()` function checks if two moves are opposites:
+The `condition1()` function checks if the third move after a parallel move is parallel or not. This ensures that we do not go back a scrammble state thus making it easier to solve.
 ```cpp
 inline bool cond(char a, char b) {
     if (a > b) swap(a, b);
     return (a == 'L' && b == 'R') || (a == 'B' && b == 'F') || (a == 'D' && b == 'U');
 }
 ```
-The `solve()` function generates a scramble sequence:
+The `scramble()` function generates a scramble sequence:
 ```cpp
-pair<vector<string>, vector<string>> solve(int moves) {
+pair<vector<string>, vector<string>> scramble(int moves) {
     vector<string> scramble;
     string a = generate();
     scramble.push_back(a);
     while (--moves) {
         if (scramble.size() > 1) {
-            while (scramble.back()[0] == a[0] || cond(scramble.back()[0], a[0])) {
+            while (scramble.back()[0] == a[0] || condition1(scramble.back()[0], a[0])) {
                 a = generate();
             }
         } else {

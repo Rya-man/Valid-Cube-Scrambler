@@ -16,18 +16,18 @@ string generate() {
     return a;
 }
 
-inline bool cond(char a, char b) {
+inline bool condition1(char a, char b) {
     if (a > b) swap(a, b);
     return (a == 'L' && b == 'R') || (a == 'B' && b == 'F') || (a == 'D' && b == 'U');
 }
 
-pair<vector<string>, vector<string>> solve(int moves) {
+pair<vector<string>, vector<string>> Scramble(int moves) {
     vector<string> scramble;
     string a = generate();
     scramble.push_back(a);
     while (--moves) {
         if (scramble.size() > 1) {
-            while (scramble.back()[0] == a[0] || cond(scramble.back()[0], a[0])) {
+            while (scramble.back()[0] == a[0] || condition1(scramble.back()[0], a[0])) {
                 a = generate();
             }
         } else {
@@ -53,7 +53,7 @@ int main() {
     srand(time(0));
     int a=20;
     a+= rand()%10;
-    auto s = solve(a);
+    auto s = Scramble(a);
     cout << '\n';
     for (const auto& i : s.first){
         cout << i << ' ';
