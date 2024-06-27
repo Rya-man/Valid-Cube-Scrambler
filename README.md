@@ -55,7 +55,7 @@ inline bool cond(char a, char b) {
     return (a == 'L' && b == 'R') || (a == 'B' && b == 'F') || (a == 'D' && b == 'U');
 }
 ```
-The `scramble()` function generates a scramble sequence:
+The `scramble()` function generates a scramble sequence of size mves that is randomly chosen between 20 to 30:
 ```cpp
 pair<vector<string>, vector<string>> scramble(int moves) {
     vector<string> scramble;
