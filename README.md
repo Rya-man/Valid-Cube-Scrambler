@@ -9,6 +9,24 @@ This is a random scrambbler for Generating valid WCA scrambled rubiks cube state
 - Ensures no consecutive moves are the same or opposites.
 - Outputs both standard and readable scramble notations.
 
+## How To Use
+
+Clone the Repository.
+
+```bash
+  git clone https://github.com/Rya-man/Valid-Cube-Scrambler
+```
+Compile the program.
+
+```bash
+    g++ -o scramble_generator main.cpp
+
+```
+Run the Program.
+ ``` bash
+    ./scramble_generator
+```
+
 ## Code
 
 ### `Movelist`
@@ -67,24 +85,4 @@ pair<vector<string>, vector<string>> solve(int moves) {
     return make_pair(scramble_readable, scramble);
 }
 ```
-
-
-## How To Use
-
-Clone the Repository.
-
-```bash
-  git clone https://github.com/Rya-man/Valid-Cube-Scrambler
-```
-Compile the program.
-
-```bash
-    g++ -o scramble_generator main.cpp
-
-```
-Run the Program.
- ``` bash
-    ./scramble_generator
-```
-
 
