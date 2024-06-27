@@ -51,9 +51,8 @@ pair<vector<string>, vector<string>> solve(int moves) {
 
 int main() {
     srand(time(0));
-
-    int a;
-    cin >> a;
+    int a=20;
+    a+= rand()%10;
     auto s = solve(a);
     cout << '\n';
     for (const auto& i : s.first){
