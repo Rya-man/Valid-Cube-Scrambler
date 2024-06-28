@@ -54,7 +54,6 @@ int main() {
     int a=20;
     a+= rand()%10;
     auto s = Scramble(a);
-    cout << '\n';
     for (const auto& i : s.first){
         cout << i << ' ';
     }
